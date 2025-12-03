@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="inp" id="inp">
+    <button id="btn">submit</button>
+
+    <h3 id="out"></h3>
+
+    <script>
+        const btn = document.querySelector("#btn");
+        const inp = document.querySelector("#inp");
+        const out = document.querySelector("#out");
+
+        btn.addEventListener('click', ()=>{
+            var input = inp.value;
+            localStorage.setItem("inpStore", input);
+            
+            out.innerText = localStorage.getItem("inpStore");
+        })
+    </script>
+</body>
+</html>
